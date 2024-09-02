@@ -4,7 +4,9 @@ public:
 
         long long sum=0;
         for(int i=0;i<chalk.size();i++) sum+=1LL*chalk[i];
+
         k=k%sum;
+
         int index=0;
         while(true){
             if(index==chalk.size()) index=0;
@@ -12,6 +14,6 @@ public:
             k=k-chalk[index];
             index++;
         }
-        return index;
+        return -1;
     }
 };
